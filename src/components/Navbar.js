@@ -1,3 +1,5 @@
+import { Cart } from "./CartWidget"
+
 export const Navbar = () => {
     return(
         <nav className="navbar">
@@ -6,10 +8,12 @@ export const Navbar = () => {
                 <li><a href=" ">Inicio</a></li>
                 <li><a href=" ">Productos</a></li>
                 <li><a href=" ">Contacto</a></li>
-                <li><a href=" ">Carrito</a></li>
 
             </ul>
-            <button type="submit" className="btn-log">Login</button>
+            <div className="row">
+                <Cart />
+                <button type="submit" className="btn-log">Login</button>
+            </div>
         </nav>
     )
 }
