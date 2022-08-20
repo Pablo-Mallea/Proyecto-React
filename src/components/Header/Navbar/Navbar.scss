@@ -1,0 +1,57 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 30px;
+        margin: 0;
+        width: 150px;
+        letter-spacing: .1rem;
+    }
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style-type: none;
+        width: 400px;
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .row {
+        width: 150px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .btn-log {
+            background-color: none;
+            width: 75px;
+            height: 30px;
+            border-radius: 7px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .carrito {
+            width: 30px;
+            height: 30px;
+
+            .cart-icon {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+    }
+}
