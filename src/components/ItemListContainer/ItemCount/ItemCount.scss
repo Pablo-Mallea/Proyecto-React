@@ -1,0 +1,65 @@
+
+.card{
+    width: 250px;
+    height: auto;
+    padding: 15px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+
+    h4{
+        margin: 0;
+    }
+    .descripcion{
+        width: auto;
+        height: auto;
+        margin-bottom: 10px;
+        font-size: 10px;
+        color: gray;
+    }
+
+    .counter{
+        width: 125px;
+        height: auto;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        span{
+            width: 11px;
+        }
+        .btn-counter{
+            width: 30px;
+            height: 30px;
+            color: #fff;
+            background-color: #005F81;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+    .btn-agregar{
+        width: 125px;
+        height: 30px;
+        background-color: #005F81;
+        color: #eee;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .agregado{
+        width: 125px;
+        height: 30px;
+        background-color: green;
+        color: #eee;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
