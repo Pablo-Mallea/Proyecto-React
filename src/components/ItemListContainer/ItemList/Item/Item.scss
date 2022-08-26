@@ -1,0 +1,30 @@
+.card{
+    width: 250px;
+    height: auto;
+    padding: 15px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    margin: 15px 10px;
+
+    .img-producto{
+        width: 100%;
+        height: 250px;
+    
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .descripcion{
+        width: auto;
+        height: auto;
+        margin: 10px 0;
+        font-size: 10px;
+        color: gray;
+    }
+}

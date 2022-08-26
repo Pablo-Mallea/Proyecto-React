@@ -1,5 +1,5 @@
 import "./ItemCount.scss";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const ItemCount = ({ stock }) => {
   let [counter, setCounter] = useState(0);
@@ -28,16 +28,6 @@ export const ItemCount = ({ stock }) => {
       }, 3000);
     }
   };
-
-  useEffect(() => {
-    console.log("carrito vacio");
-  }, []);
-
-  useEffect(() => {
-    if (agregar) {
-      console.log("Producto agregado al carrito");
-    }
-  }, [agregar]);
 
   return (
     <div className="card">
