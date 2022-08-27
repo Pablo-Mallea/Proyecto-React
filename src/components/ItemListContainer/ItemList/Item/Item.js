@@ -8,8 +8,9 @@ export const Item = ({ producto }) => {
       </div>
       <h4>{producto.nombre}</h4>
       <p className="descripcion">{producto.descripcion}</p>
-      <p>Precio: ${producto.precio}</p>
+      <p>${producto.precio}</p>
       <small>Stock disponible: {producto.stock}</small>
+      <button className="btn-detalle">Ver en Detalle</button>
     </div>
   );
 };
