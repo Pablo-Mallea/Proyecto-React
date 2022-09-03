@@ -6,40 +6,35 @@ import { useParams } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
 
 export const ItemListContainer = () => {
-
   const [productos, setProductos] = useState([]);
-  const [loading, setLoading] = useState(true)
-  
-  const {categoryId} = useParams();
+  const [loading, setLoading] = useState(true);
+
+  const { categoryId } = useParams();
   console.log(categoryId);
 
   //Garantizo que solo hago la peticion de datos en el montaje (una sola vez)
-  useEffect(() => { 
-
-    setLoading(true)
+  useEffect(() => {
+    setLoading(true);
 
     pedirDatos()
       .then((res) => {
-        if(!categoryId){
+        if (!categoryId) {
           setProductos(res);
-        }else {
-          setProductos( res.filter((prod)=> prod.category === categoryId))
+        } else {
+          setProductos(res.filter((prod) => prod.category === categoryId));
         }
       })
       .catch((error) => {
         console.log(error);
       })
       .finally(() => {
-        setLoading(false)
-      })
-      
+        setLoading(false);
+      });
   }, [categoryId]);
 
   return (
     <section className="itemListContainer">
-      {
-        loading ? <Loader /> : <ItemList productos={productos} />
-      }
+      {loading ? <Loader /> : <ItemList productos={productos} />}
     </section>
   );
 };

@@ -1,4 +1,3 @@
-
 export const stock = [
   {
     id: 1,
