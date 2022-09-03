@@ -1,33 +1,45 @@
 import "./ItemListContainer.scss";
-//import { ItemCount } from "./ItemCount/ItemCount";
 import { useEffect, useState } from "react";
 import { pedirDatos } from "../../helpers/pedirDatos";
 import { ItemList } from "./ItemList/ItemList";
+import { useParams } from "react-router-dom";
+import { Loader } from "../Loader/Loader";
 
 export const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
-
-  console.log(productos);
+  const [loading, setLoading] = useState(true)
+  
+  const {categoryId} = useParams();
+  console.log(categoryId);
 
   //Garantizo que solo hago la peticion de datos en el montaje (una sola vez)
   useEffect(() => { 
+
+    setLoading(true)
+
     pedirDatos()
       .then((res) => {
-        setProductos(res);
+        if(!categoryId){
+          setProductos(res);
+        }else {
+          setProductos( res.filter((prod)=> prod.category === categoryId))
+        }
       })
       .catch((error) => {
         console.log(error);
       })
+      .finally(() => {
+        setLoading(false)
+      })
       
-  }, []);
+  }, [categoryId]);
 
   return (
     <section className="itemListContainer">
-
-      <ItemList productos={productos} />
-
-      {/* <ItemCount stock={15} /> */}
+      {
+        loading ? <Loader /> : <ItemList productos={productos} />
+      }
     </section>
   );
 };

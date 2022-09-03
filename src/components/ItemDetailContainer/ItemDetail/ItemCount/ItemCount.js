@@ -30,15 +30,7 @@ export const ItemCount = ({ stock }) => {
   };
 
   return (
-    <div className="card">
-      <div>
-        <h4>Producto 1</h4>
-        <p className="descripcion">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-      </div>
-
+    <div className="item-count">
       <div className="counter">
         <button onClick={handleRestar} className="btn-counter">
           -

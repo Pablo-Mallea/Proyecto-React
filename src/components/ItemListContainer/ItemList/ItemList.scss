@@ -2,15 +2,16 @@
     width: 100%;
     height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
     .productos{
         width: 100%;
-        height: auto;
+        min-height: auto;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+
     }
 }
