@@ -12,7 +12,6 @@ export const ItemListContainer = () => {
   const { categoryId } = useParams();
   console.log(categoryId);
 
-  //Garantizo que solo hago la peticion de datos en el montaje (una sola vez)
   useEffect(() => {
     setLoading(true);
 

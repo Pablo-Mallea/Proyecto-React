@@ -11,7 +11,7 @@ function App() {
 
         <Header />
 
-        <Routes> {/* Debe recibir un listado de componentes routes, cada elemento es una ruta posible  */}
+        <Routes>
           <Route path="/" element={ <ItemListContainer /> } />
           <Route path="/productos/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={ <ItemDetailContainer /> } />
