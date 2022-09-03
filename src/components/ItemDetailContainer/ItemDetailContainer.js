@@ -22,7 +22,7 @@ export const ItemDetailContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [itemId]);
 
   return <div>{loading ? <Loader /> : <ItemDetail item={item} />}</div>;
 };
