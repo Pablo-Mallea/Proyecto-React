@@ -1,0 +1,17 @@
+.cartContianer {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15%;
+  
+  h2 {
+    margin: 0;
+  }
+  hr{
+    width: 100%;
+  }
+
+}

@@ -4,7 +4,7 @@ import "./ItemList.scss";
 export const ItemList = ({ productos = [] }) => {
   return (
     <div className="Itemlist">
-      <h3>Productos</h3>
+      <h2>Productos</h2>
       <hr />
       {/* Renderizo mi array de elemtos con el .map() */}
       <div className="productos">

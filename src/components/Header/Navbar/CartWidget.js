@@ -1,10 +1,13 @@
 import "./Navbar.scss";
 import Icon from "../../../assets/img/cart.png";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
   return (
     <div className="carrito">
-      <img src={Icon} className="cart-icon" alt="cart-icon" />
+      <Link to="/cart">
+        <img src={Icon} className="cart-icon" alt="cart-icon" />
+      </Link>
     </div>
   );
 };

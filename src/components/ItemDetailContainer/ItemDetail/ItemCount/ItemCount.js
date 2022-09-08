@@ -1,10 +1,10 @@
 import "./ItemCount.scss";
-import { useState } from "react";
 
-export const ItemCount = ({ stock }) => {
-  let [counter, setCounter] = useState(0);
-  let [clase, setClase] = useState("btn-agregar");
-  let [agregar, setAgregar] = useState(false);
+export const ItemCount = ({ stock, counter, setCounter, handleAgregar }) => {
+
+  //LLamo a la funcion de orden superior "setCounter" para disparar la funcion serCantidad del ItemDetail
+  //Al detectar un cambio en sus parametros se vuelve a renderizar el componente
+  //Los componenetes inferiores puede subir cambios a los componentes superiores (ItemDetail)
 
   const handleSumar = () => {
     if (counter < stock) {
@@ -18,16 +18,6 @@ export const ItemCount = ({ stock }) => {
     }
   };
 
-  const handleAgregar = () => {
-    if (counter > 0) {
-      setAgregar(true);
-      setClase("agregado");
-      setTimeout(() => {
-        setAgregar(false);
-        setClase("btn-agregar");
-      }, 3000);
-    }
-  };
 
   return (
     <div className="item-count">
@@ -40,8 +30,8 @@ export const ItemCount = ({ stock }) => {
           +
         </button>
       </div>
-      <button onClick={handleAgregar} className={clase}>
-        {agregar ? "Agregado" : "Agregar al carrito"}
+      <button onClick={handleAgregar} className="btn-agregar">
+        Agregar al carrito
       </button>
     </div>
   );
