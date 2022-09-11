@@ -5,6 +5,6 @@ export const pedirDatos = () => {
     //Cuerpo de la promesa
     setTimeout(() => {
       resolve(stock);
-    }, 2000);
+    }, 1000);
   });
 };

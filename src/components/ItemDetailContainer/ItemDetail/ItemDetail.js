@@ -1,13 +1,14 @@
 import { ItemCount } from "./ItemCount/ItemCount";
 import "./ItemDetail.scss";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Acarrito } from "./Acarrito/Acarrito";
+import { CartContext } from "../../Context/CartContext";
 
 export const ItemDetail = ({ item }) => {
-  //Aplicando intercambiabilidad....
+
+  const { addToCart, isInCart} = useContext(CartContext)
 
   const [cantidad, setCantidad] = useState(0)
-  const [agregado, setAgregado] = useState(false)
 
   const handleAgregar = () =>{ //Recibo un evento del ItemCount
     if(cantidad > 0){
@@ -18,7 +19,9 @@ export const ItemDetail = ({ item }) => {
         cantidad
       }
       console.log(itemToCarrito);
-      setAgregado(true);
+
+      addToCart(itemToCarrito)
+      isInCart(item.id)
     }
 
   }
@@ -34,7 +37,8 @@ export const ItemDetail = ({ item }) => {
         <small className="stock">Stock disponible: {item.stock}</small>
         <p>{item.descripcion}</p>
 
-        {agregado ? <Acarrito/> : <ItemCount 
+        {/* Pregunto si mi producto esta en el carrito */} 
+        {isInCart(item.id) ? <Acarrito /> : <ItemCount 
           stock={item.stock} 
           counter={cantidad} 
           setCounter={setCantidad}
