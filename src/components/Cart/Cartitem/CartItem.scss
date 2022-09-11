@@ -1,0 +1,32 @@
+.cartProduct {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+  filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+
+  .imgCarritoContainer{
+    width: auto;
+    height: auto;
+    padding: 5px;
+
+    .imgCarrito {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+  .eliminar {
+    width: 75px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    color: #fff;
+  }
+}

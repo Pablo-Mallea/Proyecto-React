@@ -5,6 +5,11 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
+
+    h2{
+        margin: 0;
+    }
+
     .productos{
         width: 100%;
         min-height: auto;
@@ -12,6 +17,5 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-
     }
 }

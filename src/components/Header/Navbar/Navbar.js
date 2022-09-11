@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-import { Cart } from "./CartWidget";
+import { CartWidget } from "./CartWidget/CartWidget";
 import { Link } from "react-router-dom"; //navego dentro de mi router sin tener q recargar la pagina
 
 export const Navbar = () => {
@@ -18,8 +18,8 @@ export const Navbar = () => {
         <Link to="/productos/remeras">Remeras</Link>
       </ul>
       <div className="row">
-        <Cart />
-        <button type="submit" className="btn-log">
+        <CartWidget />
+        <button className="btn-log">
           Login
         </button>
       </div>

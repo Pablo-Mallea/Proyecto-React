@@ -1,13 +1,13 @@
 .spiner{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;    
     .carga{
-        width: 50px;
-        height: 50px;
-        border: 10px solid #ccc;
+        width: 40px;
+        height: 40px;
+        border: 8px solid #ccc;
         border-top-color: #3483fa;
         border-radius: 100%;
         animation: girar 1.5s linear infinite;
