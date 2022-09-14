@@ -1,15 +1,30 @@
-.carrito {
-    width: 20px;
-    height: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-
+.carritoHidden{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
     .cart-icon {
         width: 30px;
         height: 30px;
         object-fit: cover;
     }
+}
 
+.carritoVisible {
+    visibility: visible;
+    opacity: 1;
+
+    .widgetContainer{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    
+        .cart-icon {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+    }
 }

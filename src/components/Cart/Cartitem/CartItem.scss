@@ -13,20 +13,25 @@
   .imgCarritoContainer{
     width: auto;
     height: auto;
-    padding: 5px;
+    padding: 10px;
 
     .imgCarrito {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
+      width: 125px;
+      height: 125px;
+      object-fit: contain;
     }
   }
   .eliminar {
-    width: 75px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     background-color: red;
     color: #fff;
+    
+    .eliminarIcon{
+      width: 20px;
+      height: 20px;
+    }
   }
 }

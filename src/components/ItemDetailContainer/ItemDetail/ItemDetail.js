@@ -14,6 +14,7 @@ export const ItemDetail = ({ item }) => {
     if(cantidad > 0){
        const itemToCarrito = {
         id: item.id,
+        img: item.img,
         nombre: item.nombre,
         precio: item.precio,
         cantidad

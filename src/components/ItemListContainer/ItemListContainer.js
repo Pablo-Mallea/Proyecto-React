@@ -10,7 +10,6 @@ export const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   const { categoryId } = useParams();
-  console.log(categoryId);
 
   useEffect(() => {
     setLoading(true);
@@ -33,7 +32,11 @@ export const ItemListContainer = () => {
 
   return (
     <section className="itemListContainer">
-      {loading ? <Loader /> : <ItemList productos={productos} />}
+      {
+        loading ? 
+        <Loader /> : 
+        <ItemList productos={productos} />
+      }
     </section>
   );
 };

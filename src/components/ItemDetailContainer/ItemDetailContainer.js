@@ -24,5 +24,9 @@ export const ItemDetailContainer = () => {
       });
   }, [itemId]);
 
-  return <div>{loading ? <Loader /> : <ItemDetail item={item} />}</div>;
+  return (
+    <div>
+      {loading ? <Loader /> : <ItemDetail item={item} />}
+    </div>
+  );
 };

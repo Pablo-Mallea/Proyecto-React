@@ -3,6 +3,7 @@ import { CartWidget } from "./CartWidget/CartWidget";
 import { Link } from "react-router-dom"; //navego dentro de mi router sin tener q recargar la pagina
 
 export const Navbar = () => {
+
   return (
     <nav className="navbar">
       <Link to="/">
