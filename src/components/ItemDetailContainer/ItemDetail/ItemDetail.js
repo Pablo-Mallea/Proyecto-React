@@ -10,7 +10,7 @@ export const ItemDetail = ({ item }) => {
 
   const [cantidad, setCantidad] = useState(0)
 
-  const handleAgregar = () =>{ //Recibo un evento del ItemCount
+  const handleAgregar = () => { //Recibo un evento del ItemCount
     if(cantidad > 0){
        const itemToCarrito = {
         id: item.id,

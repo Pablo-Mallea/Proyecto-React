@@ -1,9 +1,11 @@
 import "./ItemListContainer.scss";
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../../helpers/pedirDatos";
 import { ItemList } from "./ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
+
+import { db } from "../../firebase/config"
+import {collection, getDocs, query, where } from "firebase/firestore"
 
 export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -13,21 +15,25 @@ export const ItemListContainer = () => {
 
   useEffect(() => {
     setLoading(true);
+    // 1-Armo la referencia (sync)
+    const productosRef = collection(db, 'productos')
 
-    pedirDatos()
-      .then((res) => {
-        if (!categoryId) {
-          setProductos(res);
-        } else {
-          setProductos(res.filter((prod) => prod.category === categoryId));
-        }
-      })
-      .catch((error) => {
-        console.log(error);
+    //Armo query de busqueda para filtrar productos
+    const q = categoryId
+                ? query(productosRef, where('category', '==', categoryId)) //traigo de productosRef donde category coinsida con el categoyId que le pido
+                : productosRef;
+
+    // 2-Llamo a la referencia (async)
+    getDocs(q)
+      .then((resp) => {
+        const productosDB = resp.docs.map( (doc) => ({id: doc.id, ...doc.data()}) );
+
+        setProductos(productosDB)
       })
       .finally(() => {
-        setLoading(false);
-      });
+        setLoading(false)
+      })
+
   }, [categoryId]);
 
   return (

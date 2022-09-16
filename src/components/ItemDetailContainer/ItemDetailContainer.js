@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../../helpers/pedirDatos";
 import { ItemDetail } from "./ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
+
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
@@ -14,11 +16,15 @@ export const ItemDetailContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    pedirDatos()
-      .then((res) => {
-        setItem(res.find((prod) => prod.id === Number(itemId)));
+    // 1-Armo la referencia (sync)
+    const docRef = doc(db, 'productos', itemId) 
+    // De donde saco la base de datos, el nombre de la coleccion, id del router
+    
+    // 2-Llamo a la referencia (async)
+    getDoc(docRef)
+      .then((doc) => {
+        setItem({id: doc.id, ...doc.data()})
       })
-      .catch((error) => console.log(error))
       .finally(() => {
         setLoading(false);
       });
