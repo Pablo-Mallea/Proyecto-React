@@ -2,6 +2,7 @@ import './cartContent.scss'
 import { useContext } from "react";
 import { CartContext } from '../../Context/CartContext';
 import { CartItem } from "../Cartitem/CartItem";
+import { Link } from 'react-router-dom';
 
 export const CartContent = () => {
 
@@ -22,9 +23,11 @@ export const CartContent = () => {
           <button onClick={vaciarCarrito} className="vaciarCarrito">
             Vaciar carrito
           </button>
-          <button className="comprar">
-            Comprar
-          </button>
+          <Link to={'/checkout'} >
+            <button className="comprar">
+              Comprar
+            </button>
+          </Link>
         </div>
       </div>
   )

@@ -22,13 +22,16 @@
         span{
             width: 11px;
             font-size: 16px;
+            color: #3483fa;
         }
         .btn-counter{
             width: 40px;
             height: 40px;
             align-self: center;
-            color: #fff;
-            background-color: #3483fa;
+            //color: #fff;
+            //background-color: #3483fa;
+            color: #688B58;
+            background-color: rgba(65,137,230,.15);
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -39,8 +42,10 @@
     .btn-agregar{
         width: 200px;
         height: 40px;
-        background-color: #3483fa;
-        color: #eee;
+        //background-color: #3483fa;
+        //color: #eee;
+        color: #3483fa;
+        background-color: rgba(65,137,230,.15);
         border: none;
         border-radius: 5px;
         font-size: 16px;

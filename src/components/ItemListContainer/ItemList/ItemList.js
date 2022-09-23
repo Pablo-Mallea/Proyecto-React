@@ -5,7 +5,7 @@ export const ItemList = ({ productos = [] }) => {
   return (
     <div className="Itemlist">
       <h2>Productos</h2>
-      <hr />
+      
       {/* Renderizo mi array de elemtos con el .map() */}
       <div className="productos">
         {productos.map((prod) => {

@@ -32,6 +32,10 @@ export const CartProvider = ({ children }) => {
     setCart( cart.filter((item) => item.id !== id) )//Retorno un array nuevo con los items que no tengan el id que paso por parametro
   }
 
+  const terminarCompra = () => {
+    setCart([])
+  }
+
   useEffect(() => {
     localStorage.setItem('carrito', JSON.stringify(cart))
     }, [cart])
@@ -45,7 +49,8 @@ export const CartProvider = ({ children }) => {
         cartCant,
         cartTotal,
         vaciarCarrito,
-        removeItem
+        removeItem,
+        terminarCompra
       }}
     >
       {children}

@@ -17,6 +17,7 @@ export const ItemDetail = ({ item }) => {
         img: item.img,
         nombre: item.nombre,
         precio: item.precio,
+        stock: item.stock,
         cantidad
       }
       console.log(itemToCarrito);

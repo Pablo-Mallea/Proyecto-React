@@ -8,7 +8,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <Link to="/">
         <div className="logo">
-          <img src="./vectorCap.png" className="img-logo" alt="logo" />
+          {/* <img src="./vectorCap.png" className="img-logo" alt="logo" /> */}
           <h1>Korra</h1>
         </div>
       </Link>
