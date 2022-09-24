@@ -30,8 +30,8 @@ export const Checkout = () => {
         const orden = {
             comprador: values,
             items: cart,
-            total: cartTotal()
-
+            total: cartTotal(),
+            date: new Date()
         }
         console.log(orden)
 
@@ -85,8 +85,10 @@ export const Checkout = () => {
     if(orderId){
         return(
             <div className="checkoutContainer">
-                <h3>Gracias por tu compra!</h3>
-                <p>Este es tu numero de orden: <strong>{orderId}</strong></p>
+                <h2>Gracias por tu compra!</h2>
+                <p>Este es tu numero de orden: 
+                    <strong className="nroDeOrden">{orderId}</strong>
+                </p>
             </div>
         )
     }
@@ -97,7 +99,7 @@ export const Checkout = () => {
 
   return (
     <div className="checkoutContainer">
-        <h3>Checkout</h3>
+        <h2>Checkout</h2>
 
         <p>Completa los ultimos datos</p>
 
@@ -126,7 +128,7 @@ export const Checkout = () => {
 
                 />
 
-                <button type="submit" className="btn-enviar">Enviar</button>
+                <button type="submit" className="btn-enviar">Comprar</button>
         </form>
     </div>
   )
