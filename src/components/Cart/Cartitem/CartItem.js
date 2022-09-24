@@ -17,7 +17,7 @@ export const CartItem = ({ item }) => {
       </div>
       <h3>{item.nombre}</h3>
       <p>Precio: ${item.precio}</p>
-      <p>Cantidad: ${item.cant}</p>
+      <p>Cantidad: {item.cantidad}</p>
 
       <button onClick={()=> removeItem(item.id)} className="eliminar">
         <CgTrash className="eliminarIcon"/>
