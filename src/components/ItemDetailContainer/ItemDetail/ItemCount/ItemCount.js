@@ -18,7 +18,6 @@ export const ItemCount = ({ stock, counter, setCounter, handleAgregar }) => {
     }
   };
 
-
   return (
     <div className="item-count">
       <div className="counter">

@@ -6,22 +6,10 @@ import { CgTrash } from "react-icons/cg";
 
 export const CartItem = ({ item }) => {
 
-  const {removeItem, cart} = useContext(CartContext)
-  console.log(item)
-  console.log(cart)
+  const {removeItem } = useContext(CartContext)
+  /* console.log(item)
+  console.log(cart) */
   const [cant, setCant] = useState(item.cantidad)
-
-  const handleSumar = () => {
-    if (cant < item.stock) {
-      setCant(cant + 1);
-    }
-  };
-
-  const handleRestar = () => {
-    if (cant > 1) {
-      setCant(cant - 1);
-    }
-  };
 
   return (
     <div className="cartProduct">
@@ -31,8 +19,6 @@ export const CartItem = ({ item }) => {
       <h3>{item.nombre}</h3>
       <p>Precio: ${item.precio}</p>
       <p>Cantidad: {cant}</p>
-      <button onClick={handleRestar} className="">-</button>
-      <button onClick={handleSumar} className="" >+</button>
 
       <button onClick={()=> removeItem(item.id)} className="eliminar">
         <CgTrash className="eliminarIcon"/>

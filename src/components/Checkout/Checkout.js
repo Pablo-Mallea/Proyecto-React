@@ -1,9 +1,10 @@
 import "./Checkout.scss"
+import Swal from 'sweetalert2'
 import { useContext, useState } from "react"
 import { CartContext } from "../Context/CartContext"
 import { addDoc, collection, query, writeBatch, where, documentId, getDocs } from "firebase/firestore"
 import { db } from "../../firebase/config"
-import { Navigate } from "react-router-dom"
+import {  Navigate } from "react-router-dom"
 
 export const Checkout = () => {
 
@@ -68,7 +69,16 @@ export const Checkout = () => {
                         })
                 })
         }else{
-            alert("No hay stock disponible")
+            console.log((outOfStock.map( e => e.nombre)) )
+          
+            Swal.fire(
+                {
+                icon: 'error',
+                title: 'Compra rechazada',
+                showConfirmButton: false,
+                html: `No hay suficiente stock disponible de ${outOfStock.map( e => e.nombre )}`,
+                footer: '<a href="/cart">Revisar carrito</a>',
+              })
         }
     }
 
@@ -96,19 +106,24 @@ export const Checkout = () => {
                     name="nombre"
                     value={values.nombre}
                     onChange={handleImputChange}
-                    type={'text'} placeholder='Nombre' 
+                    type={'text'} placeholder='Nombre'
+                    required
                 />
                 <input 
                     name="email"
                     value={values.email}
                     onChange={handleImputChange}
                     type={'email'} placeholder='Email'
+                    required
+
                 />
                 <input
                     name="direccion"
                     value={values.direccion}
                     onChange={handleImputChange}
                     type={'text'} placeholder='Dirección'
+                    required
+
                 />
 
                 <button type="submit" className="btn-enviar">Enviar</button>
