@@ -1,11 +1,6 @@
 import "./ItemCount.scss";
 
 export const ItemCount = ({ stock, counter, setCounter, handleAgregar }) => {
-
-  //LLamo a la funcion de orden superior "setCounter" para disparar la funcion serCantidad del ItemDetail
-  //Al detectar un cambio en sus parametros se vuelve a renderizar el componente
-  //Los componenetes inferiores puede subir cambios a los componentes superiores (ItemDetail)
-
   const handleSumar = () => {
     if (counter < stock) {
       setCounter(counter + 1);

@@ -8,7 +8,10 @@ export const CartWidget = () => {
   const { cartCant, cart } = useContext(CartContext);
 
   return (
-    <Link to="/cart" className={`carritoHidden ${cart.length > 0 ? 'carritoVisible' : ' '}`}>
+    <Link
+      to="/cart"
+      className={`carritoHidden ${cart.length > 0 ? "carritoVisible" : " "}`}
+    >
       <div className="widgetContainer">
         <CgShoppingCart className="cart-icon" />
         <span>{cartCant()}</span>

@@ -1,19 +1,19 @@
-.AcarritoContainer{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    .Acarrito{
-        width: auto;
-        height: 40px;
-        padding: 10px 15px;
-        font-size: 16px;   
-        border-radius: 10px;
-        border: none;
-        color: #3483fa;
-        background-color: rgba(65,137,230,.15);
-        cursor: pointer;
-    }
+.AcarritoContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  .Acarrito {
+    width: auto;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    color: #3483fa;
+    background-color: rgba(65, 137, 230, 0.15);
+    cursor: pointer;
+  }
 }

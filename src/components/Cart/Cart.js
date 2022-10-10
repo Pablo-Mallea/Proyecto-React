@@ -8,14 +8,9 @@ export const Cart = () => {
   const { cart } = useContext(CartContext);
 
   return (
-    
     <div className="cartContianer">
       <h2>Carrito</h2>
-      <hr />
-      {
-        cart.length > 0 ? <CartContent/> : <EmptyCart/>
-      }
-      
-    </div> 
+      { cart.length > 0 ? <CartContent /> : <EmptyCart /> }
+    </div>
   );
 };

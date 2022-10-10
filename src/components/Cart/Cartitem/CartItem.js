@@ -3,12 +3,8 @@ import { CartContext } from "../../Context/CartContext";
 import "./CartItem.scss";
 import { CgTrash } from "react-icons/cg";
 
-
 export const CartItem = ({ item }) => {
-
-  const {removeItem } = useContext(CartContext)
-  /* console.log(item)
-  console.log(cart) */
+  const { removeItem } = useContext(CartContext);
 
   return (
     <div className="cartProduct">
@@ -19,8 +15,8 @@ export const CartItem = ({ item }) => {
       <p>Precio: ${item.precio}</p>
       <p>Cantidad: {item.cantidad}</p>
 
-      <button onClick={()=> removeItem(item.id)} className="eliminar">
-        <CgTrash className="eliminarIcon"/>
+      <button onClick={() => removeItem(item.id)} className="eliminar">
+        <CgTrash className="eliminarIcon" />
       </button>
     </div>
   );

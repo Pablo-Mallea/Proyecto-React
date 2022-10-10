@@ -1,60 +1,57 @@
+.item-count {
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
 
-.item-count{
-    width: auto;
+  .counter {
+    width: 200px;
     height: auto;
-    padding: 15px 20px;
-    background-color: #fff;
+    margin-bottom: 10px;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
 
-    .counter{
-        width: 200px;
-        height: auto;
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        span{
-            width: 11px;
-            font-size: 16px;
-            color: #3483fa;
-        }
-        .btn-counter{
-            width: 40px;
-            height: 40px;
-            align-self: center;
-            color: #3483fa;
-            background-color: rgba(65,137,230,.15);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 20px;
-            
-        }
+    span {
+      width: 11px;
+      font-size: 16px;
+      color: #3483fa;
     }
-    .btn-agregar{
-        width: 200px;
-        height: 40px;
-        color: #3483fa;
-        background-color: rgba(65,137,230,.15);
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
+    .btn-counter {
+      width: 40px;
+      height: 40px;
+      align-self: center;
+      color: #3483fa;
+      background-color: rgba(65, 137, 230, 0.15);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 20px;
     }
-    .agregado{
-        width: 200px;
-        height: 40px;
-        background-color: #3483fa;
-        color: #eee;
-        border: none;        
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+  }
+  .btn-agregar {
+    width: 200px;
+    height: 40px;
+    color: #3483fa;
+    background-color: rgba(65, 137, 230, 0.15);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .agregado {
+    width: 200px;
+    height: 40px;
+    background-color: #3483fa;
+    color: #eee;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

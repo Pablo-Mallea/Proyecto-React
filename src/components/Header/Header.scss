@@ -1,10 +1,23 @@
-header {
-    width: auto;
-    height: 70px;
-    margin: 0;
-    color: #fff;
-    padding: 0 15%;
-    display: flex;
-    align-content: center;
+@media (max-width: 991px) {
 
+    header {
+        width: auto;
+        height: 70px;
+        margin: 0;
+        color: #fff;
+        padding: 0 10%;
+        display: flex;
+        align-content: center;
+    }
+}
+@media (min-width: 992px) {
+    header {
+        width: auto;
+        height: 70px;
+        margin: 0;
+        color: #fff;
+        padding: 0 15%;
+        display: flex;
+        align-content: center;
+    }
 }

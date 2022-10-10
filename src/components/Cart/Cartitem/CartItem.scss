@@ -1,42 +1,89 @@
-.cartProduct {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 8px;
-  background-color: #fff;
-  filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
-
-  .imgCarritoContainer{
-    width: auto;
+@media (max-width: 991px) {
+  .cartProduct {
+    min-width: 100%;
     height: auto;
-    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 
-    .imgCarrito {
-      width: 125px;
-      height: 125px;
-      object-fit: contain;
+    .imgCarritoContainer {
+      width: auto;
+      height: auto;
+      padding: 10px;
+
+      .imgCarrito {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+      }
+    }
+    .eliminar {
+      margin-bottom: 10px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+      color: red;
+      display: flex;
+      align-items: center;
+
+      .eliminarIcon {
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
-  .eliminar {
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    background-color: red;
-    color: #fff;
+}
+@media (min-width: 991px) {
+  .cartProduct {
+    width: 85%;
+    height: auto;
+    margin-bottom: 20px;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
-    
-    .eliminarIcon{
-      width: 20px;
-      height: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+
+    .imgCarritoContainer {
+      width: auto;
+      height: auto;
+      padding: 10px;
+
+      .imgCarrito {
+        width: 125px;
+        height: 125px;
+        object-fit: contain;
+      }
     }
-    &:hover{
-      cursor: pointer;
+    .eliminar {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+      color: red;
+      display: flex;
+      align-items: center;
+
+      .eliminarIcon {
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
